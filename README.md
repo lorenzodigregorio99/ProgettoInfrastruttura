@@ -1,4 +1,3 @@
-# ProgettoInfrastruttura
 # Enterprise Infrastructure Lab: Multi-Site Routing, PKI & VPN Architecture
 
 ## 📌 Descrizione del Progetto
@@ -7,9 +6,14 @@ L'obiettivo principale è simulare l'interconnessione sicura tra una **Sede Cent
 
 ---
 
-## 🗺️ Topologia di Rete (Network Diagram)
+## 🗺️ Architettura di Rete (Network Architecture)
+L'infrastruttura è suddivisa in tre segmenti logici principali:
+1. **Sede Centrale (HQ):** Gestita sulla subnet `192.168.1.0/24`, ospita il Domain Controller principale (DC1) e i servizi core dell'infrastruttura aziendale.
+2. **Rete di Transito WAN:** Una rete geografica simulata (`200.0.0.0/30`) che connette le interfacce pubbliche dei due router perimetrali.
+3. **Sede Remota (Branch):** Gestita sulla subnet `10.0.0.0/24`, ospita i client aziendali (es. Client 7) che accedono ai servizi centralizzati tramite tunnel sicuri.
 
-```
+<!-- Se carichi un'immagine da Draw.io chiamata diagramma.png, rimuovi il commento qui sotto per mostrarla -->
+<!-- ![Network Diagram](diagramma.png) -->
 
 ---
 
@@ -19,7 +23,7 @@ L'obiettivo principale è simulare l'interconnessione sicura tra una **Sede Cent
 *   **Active Directory Domain Services (AD DS):** Creazione del dominio aziendale, configurazione della foresta e annessione centralizzata dei client. Gestione granulare di utenti, gruppi e permessi di sicurezza.
 *   **Group Policy Management (GPO):** Implementazione di policy oggettive per la distribuzione automatica delle configurazioni di sicurezza e la mappatura delle risorse.
 *   **DHCP Server:** Configurazione dell'ambito (scope) di rete con esclusioni dedicate, prenotazioni IP statiche e implementazione di **DHCP Relay Agent** per consentire il corretto instradamento delle richieste broadcast tra subnet differenti.
-*   **DNS Server:** Configurazione di zone di ricerca diretta e inversa per la corretta risoluzione dei nomi dei servizi interni ed esterni.
+*   **DNS Server:** Configurazione di zone di ricerca diretta e inversa per la corretta resolução dei nomi dei servizi interni ed esterni.
 
 ### 2. Public Key Infrastructure (PKI) & Web Security
 *   **Certification Authority (CA):** Configurazione e deployment di una CA interna per la gestione del ciclo di vita dei certificati digitali (rilascio, rinnovo e revoca).
@@ -49,4 +53,3 @@ L'obiettivo principale è simulare l'interconnessione sicura tra una **Sede Cent
 *   **Sicurezza e Infrastruttura:** Active Directory, PKI, Certificate Authority, Windows Firewall, GPO, DNS, DHCP.
 *   **Storage & Web:** iSCSI, RAID, IIS Web Server.
 *   **Virtualizzazione:** VMware Workstation / ESXi.
-
