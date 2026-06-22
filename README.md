@@ -19,8 +19,8 @@ L'infrastruttura è strutturata su tre macro-aree logiche con la seguente mappat
    *   **Router 2 (Interfaccia WAN):** `200.0.0.2`
    *   *Nota:* Su questa tratta è stabilita la **VPN Site-to-Site** permanente con credenziali speculari su entrambi gli apparati.
 
-3. **Sede Remota (Branch) - Subnet LAN: `10.0.0.0/24`**
-   *   **Router 2 (Gateway Branch):** `10.0.0.1` (Configurato anche come DHCP Relay Agent)
+3. **Sede Remota - Subnet LAN: `10.0.0.0/24`**
+   *   **Router 2 :** `10.0.0.1` (Configurato anche come DHCP Relay Agent)
    *   **Client 7 (Windows 7):** Ottiene l'IP dinamicamente tramite DHCP all'interno della rete `10.0.0.0/24`.
 
 ---
