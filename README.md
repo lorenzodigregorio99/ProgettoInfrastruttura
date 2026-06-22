@@ -29,7 +29,7 @@
 ---
 
 ## 📈 Competenze Tecniche Dimostrate (Hard Skills)
-* **Sistemi Operativi:** Windows Server 2012, Linux (Ubuntu, AlmaLinux, Kali Linux).
+* **Sistemi Operativi:** Windows Server 2012, Linux.
 * **Networking:** Routing, Switching, Subnetting, VPN (Site-to-Site, Remote Access), L2TP, IKEv2, PPTP, RADIUS.
 * **Sicurezza e Infrastruttura:** Active Directory, PKI, Certificate Authority, Windows Firewall, GPO, DNS, DHCP.
 * **Storage & Web:** iSCSI, RAID, IIS Web Server.
