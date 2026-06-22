@@ -10,7 +10,6 @@ L'obiettivo principale è simulare l'interconnessione sicura tra una **Sede Cent
 ## 🗺️ Topologia di Rete (Network Diagram)
 
 ```
-<!-- ![Network Diagram](diagramma.png) -->
 
 ---
 
