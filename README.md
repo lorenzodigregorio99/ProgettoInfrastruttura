@@ -29,11 +29,11 @@ L'infrastruttura è strutturata su tre macro-aree logiche con la seguente mappat
 
 ### 1. Servizi di Directory e Network Core (DC1)
 *   **Active Directory Domain Services (AD DS):** Configurazione della foresta e del dominio aziendale. Creazione del gruppo di sicurezza personalizzato `"Utenti Certificati"` e popolamento con gli utenti dedicati ai test di accesso.
-*   <img width="572" height="614" alt="image" src="https://github.com/user-attachments/assets/498e34c4-4f16-480c-9842-1630f5188e99" />
 
 *   **DHCP Server:** Configurazione dell'ambito (scope) e dei range di indirizzamento IP dedicati alla subnet remota (`10.0.0.0/24`), abilitando il rilascio centralizzato degli indirizzi IP per il perimetro di rete gestito dal Relay Agent.
 *   **Routing e Accesso Remoto (RRAS):** Configurazione del servizio di routing e attivazione dell'endpoint VPN sull'IP dedicato `192.168.254.100` per accettare le connessioni inbound dei client abilitati.
     <img width="994" height="444" alt="image" src="https://github.com/user-attachments/assets/180f97e7-5576-4807-9b0f-826cedd00744" />
+    
 ### 2. Public Key Infrastructure (PKI) Avanzata e Auto-Enrollment
 *   **Enterprise Certification Authority (Root CA):** Configurazione della CA integrata in Active Directory per l'emissione del *Certificato 0* (Root aziendale).
 *   **Auto-Enrollment di Gruppo (GPO):** Implementazione di Group Policy Objects specifiche per l'autodistribuzione e il rilascio automatico dei certificati digitali sia alle macchine fisiche (Computer) sia ai profili utente del dominio.
@@ -47,6 +47,7 @@ L'infrastruttura è strutturata su tre macro-aree logiche con la seguente mappat
 ### 4. Configurazione dei Router e Architettura VPN
 *   **Router 1 & Router 2 (Remote Access):** Configurazione del routing statico e dei servizi di accesso remoto su entrambi i nodi perimetrali.
 *   **Tunnel VPN Site-to-Site:** Configurazione di una connessione VPN permanente tra Router 1 (`200.0.0.1`) e Router 2 (`200.0.0.2`) per garantire la connectività di base inter-subnet e il transito del traffico di rete.
+*      <img width="572" height="614" alt="image" src="https://github.com/user-attachments/assets/498e34c4-4f16-480c-9842-1630f5188e99" />
 *   **DHCP Relay Agent (Router 2):** Configurazione del demone di relay sull'interfaccia LAN `10.0.0.1`. Il servizio intercetta le richieste DHCP Discover (broadcast) del Client 7 e le instrada via unicast attraverso il tunnel verso l'IP del server DHCP (`192.168.1.2`).
 *   **VPN Remote Access L2TP (Client 7):** Configurazione sul Client 7 di una connessione VPN di tipo **L2TP/IPsec** protetta da certificati. Il tunnel termina sull'interfaccia `192.168.254.100` di `DC1`, consentendo al client di superare il perimetro di rete, ottenere un IP della rete e verificare la corretta raggiungibilità dei siti IIS protetti in HTTPS.
 
