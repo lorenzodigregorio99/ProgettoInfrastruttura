@@ -37,13 +37,19 @@ L'infrastruttura è strutturata su tre macro-aree logiche con la seguente mappat
     
 ### 2. Public Key Infrastructure (PKI) Avanzata e Auto-Enrollment
 *   **Enterprise Certification Authority (Root CA):** Configurazione della CA integrata in Active Directory per l'emissione del *Certificato 0* (Root aziendale).
+*   <img width="1423" height="868" alt="image" src="https://github.com/user-attachments/assets/1f3ac4d6-a7b2-4f8f-bd8d-48ab30f79a37" />
+
 *   **Auto-Enrollment di Gruppo (GPO):** Implementazione di Group Policy Objects specifiche per l'autodistribuzione e il rilascio automatico dei certificati digitali sia alle macchine fisiche (Computer) sia ai profili utente del dominio.
+*   <img width="1625" height="849" alt="image" src="https://github.com/user-attachments/assets/82d80cee-b0f1-430e-be04-a68e0b0ebb89" />
+
 *   **Certificati Extended Validation (EV):** Configurazione della CA per il rilascio di certificati a convalida estesa (EV) per la protezione dei server web, distribuiti e validati come "Trusted" su tutti gli endpoint tramite GPO.
 
 ### 3. Server Web IIS con Mutua Autenticazione (HTTPS)
 *   **Internet Information Services (IIS):** Pubblicazione di due siti web aziendali indipendenti sull'IP `192.168.1.2`.
 *   **Hardening SSL/TLS:** Configurazione dei binding di rete per imporre l'utilizzo esclusivo del protocollo sicuro **HTTPS** e associazione dei certificati EV generati dalla CA.
 *   **Filtro Accessi basato su Certificato Client:** Configurazione delle regole di IIS per richiedere obbligatoriamente un certificato client valido (*Require Client Certificates*). L'accesso ai siti è consentito esclusivamente agli utenti appartenenti al gruppo `"Utenti Certificati"` in possesso della propria chiave privata.
+*   <img width="1675" height="810" alt="image" src="https://github.com/user-attachments/assets/8ebb6ee8-b387-4d17-be7e-f96695d40232" />
+
 
 ### 4. Configurazione dei Router e Architettura VPN
 *   **Router 1 & Router 2 (Remote Access):** Configurazione del routing statico e dei servizi di accesso remoto su entrambi i nodi perimetrali.
