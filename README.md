@@ -31,6 +31,8 @@ L'infrastruttura è strutturata su tre macro-aree logiche con la seguente mappat
 *   **Active Directory Domain Services (AD DS):** Configurazione della foresta e del dominio aziendale. Creazione del gruppo di sicurezza personalizzato `"Utenti Certificati"` e popolamento con gli utenti dedicati ai test di accesso.
 *   *   <img width="572" height="614" alt="image" src="https://github.com/user-attachments/assets/498e34c4-4f16-480c-9842-1630f5188e99" />
 *   **DHCP Server:** Configurazione dell'ambito (scope) e dei range di indirizzamento IP dedicati alla subnet remota (`10.0.0.0/24`), abilitando il rilascio centralizzato degli indirizzi IP per il perimetro di rete gestito dal Relay Agent.
+*   <img width="485" height="255" alt="image" src="https://github.com/user-attachments/assets/b6f36d64-b85a-4974-be03-bba43ab225c2" />
+
 
 *   **Routing e Accesso Remoto (RRAS):** Configurazione del servizio di routing e attivazione dell'endpoint VPN sull'IP dedicato `192.168.254.100` per accettare le connessioni inbound dei client abilitati.
         <img width="994" height="444" alt="image" src="https://github.com/user-attachments/assets/180f97e7-5576-4807-9b0f-826cedd00744" />
