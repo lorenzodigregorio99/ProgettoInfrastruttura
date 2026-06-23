@@ -48,7 +48,7 @@ L'infrastruttura è strutturata su tre macro-aree logiche con la seguente mappat
 ### 4. Configurazione dei Router e Architettura VPN
 *   **Router 1 & Router 2 (Remote Access):** Configurazione del routing statico e dei servizi di accesso remoto su entrambi i nodi perimetrali.
 *   **Tunnel VPN Site-to-Site:** Configurazione di una connessione VPN permanente tra Router 1 (`200.0.0.1`) e Router 2 (`200.0.0.2`) per garantire la connectività di base inter-subnet e il transito del traffico di rete.
-*     
+     
 *   **DHCP Relay Agent (Router 2):** Configurazione del demone di relay sull'interfaccia LAN `10.0.0.1`. Il servizio intercetta le richieste DHCP Discover (broadcast) del Client 7 e le instrada via unicast attraverso il tunnel verso l'IP del server DHCP (`192.168.1.2`).
 *   **VPN Remote Access L2TP (Client 7):** Configurazione sul Client 7 di una connessione VPN di tipo **L2TP/IPsec** protetta da certificati. Il tunnel termina sull'interfaccia `192.168.254.100` di `DC1`, consentendo al client di superare il perimetro di rete, ottenere un IP della rete e verificare la corretta raggiungibilità dei siti IIS protetti in HTTPS.
 
