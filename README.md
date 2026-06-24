@@ -80,4 +80,4 @@ L'infrastruttura è strutturata su tre macro-aree logiche con la seguente mappat
 *   **Infrastruttura VPN:** L2TP/IPsec basata su certificati, RADIUS Authentication, Servizi RRAS.
 *   **PKI & Sicurezza IT:** Enterprise CA, PKI Auto-Enrollment (User & Computer), Certificati Extended Validation (EV), GPO Root Trust.
 *   **Web Server Management:** Internet Information Services (IIS), Certificati Client (Mutua Autenticazione), Binding HTTPS.
-*   **Virtualizzazione:** Gestione avanzata di reti isolate su VMware Workstation / ESXi.
+*   **Virtualizzazione:** Gestione avanzata di reti isolate su VMware Workstation.
