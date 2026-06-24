@@ -63,6 +63,10 @@ L'infrastruttura è strutturata su tre macro-aree logiche con la seguente mappat
 *   <img width="1108" height="344" alt="image" src="https://github.com/user-attachments/assets/407a9efd-3add-4973-bee5-11ad194065d5" />
 
 *   **VPN Remote Access L2TP (Client 7):** Configurazione sul Client 7 di una connessione VPN di tipo **L2TP/IPsec** protetta da certificati. Il tunnel termina sull'interfaccia `192.168.254.100` di `DC1`, consentendo al client di superare il perimetro di rete, ottenere un IP della rete e verificare la corretta raggiungibilità dei siti IIS protetti in HTTPS.
+*   <img width="553" height="224" alt="image" src="https://github.com/user-attachments/assets/da3ff8d6-3d17-42da-bd80-4ebaced5f9ec" />
+<img width="497" height="207" alt="image" src="https://github.com/user-attachments/assets/1e196f74-735f-4106-947b-c34e0b369456" />
+
+
 
 ---
 
