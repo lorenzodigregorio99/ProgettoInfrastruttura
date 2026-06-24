@@ -77,7 +77,7 @@ L'infrastruttura è strutturata su tre macro-aree logiche con la seguente mappat
 ## 📈 Competenze Tecniche Dimostrate (Hard Skills)
 *   **Sistemi Operativi:** Windows Server 2012, Windows 7 (Client).
 *   **Networking e Routing:** Routing Statico, DHCP Relay Agent, VPN Site-to-Site, Subnetting multi-classe, Gestione interfacce multi-IP.
-*   **Infrastruttura VPN:** L2TP/IPsec basata su certificati, RADIUS Authentication, Servizi RRAS.
+*   **Infrastruttura VPN:** Site-to-site basata su certificati, L2TP/IPsec basata su certificati, RADIUS Authentication, Servizi RRAS.
 *   **PKI & Sicurezza IT:** Enterprise CA, PKI Auto-Enrollment (User & Computer), Certificati Extended Validation (EV), GPO Root Trust.
 *   **Web Server Management:** Internet Information Services (IIS), Certificati Client (Mutua Autenticazione), Binding HTTPS.
 *   **Virtualizzazione:** Gestione avanzata di reti isolate su VMware Workstation.
